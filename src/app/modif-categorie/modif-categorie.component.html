@@ -1,0 +1,27 @@
+<div class="col-md-12 offset-md-3">
+    <h3>modifier une catégorie</h3> 
+  <form (ngSubmit)="onSubmit()">
+      <div class="form-row">
+       
+  
+        
+        <div class="col-md-6 mb-3">
+          <label for="validationCustom05">nom categorie  </label>
+          <input type="text" class="form-control" [(ngModel)]="categorie.nom" name="categorie.nom" id="validationCustom05" required   >
+      
+        </div>
+       
+      </div>
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="validationCustom03">quantité</label>
+          <input type="text" class="form-control" [(ngModel)]="categorie.qt" name="qt"  id="validationCustom03" required>
+        </div>
+        
+       
+      </div>
+      <div class="form-group">
+      </div>
+      <button class="btn btn-primary" type="submit">modifier categorie</button>
+    </form>
+   

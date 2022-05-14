@@ -1,0 +1,35 @@
+    <table class="table table-hover">
+    <thead>
+      <tr>
+
+        <th scope="col">id produit </th>
+        <th scope="col">nom </th>
+        <th scope="col">quantité</th>
+        <th scope="col">category </th>
+        <th scope="col">disponibilité</th>
+        <th scope="col">date creation </th>
+        <th scope="col">date modification </th>
+        <th scope="col">Actions  </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <ng-container *ngFor="let item of productlist">
+      <tr >
+      
+        <td>{{item.idProduit}}</td>
+        <td>{{item.nom}}</td>
+        <td>{{item.qte}}</td>
+        <td>{{item.category}}</td>
+        <td>{{item.disponible}}</td>
+        <td>{{item.dateCreation}}</td>
+        <td>{{item.dateModification}}</td>
+        <td><button type="button" class="btn btn-primary btn-sm" routerLink="/edit-produit/{{item.idProduit}}">modif</button>
+            <button type="button" class="btn btn-secondary btn-sm"  (click)="deleteproduit(item.idProduit)">supp</button></td>
+        
+      </tr>
+    </ng-container>
+      
+    </tbody>
+  </table>
+  <button id=aa type="button" routerLink="/add-produits"  class="btn btn-success">   ajouter produit </button>
